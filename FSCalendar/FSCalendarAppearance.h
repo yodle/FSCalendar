@@ -60,6 +60,7 @@ typedef NS_OPTIONS(NSUInteger, FSCalendarCaseOptions) {
 @property (strong, nonatomic) UIColor  *titleTodayColor;
 @property (strong, nonatomic) UIColor  *titlePlaceholderColor;
 @property (strong, nonatomic) UIColor  *titleWeekendColor;
+@property (strong, nonatomic) UIColor  *titleTodaySelectionColor;
 
 @property (strong, nonatomic) UIColor  *subtitleDefaultColor;
 @property (strong, nonatomic) UIColor  *subtitleSelectionColor;

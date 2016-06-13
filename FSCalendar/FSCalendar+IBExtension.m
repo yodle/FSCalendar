@@ -191,6 +191,18 @@
     return self.appearance.titleWeekendColor;
 }
 
+#pragma mark - titleTodaySelectionColor
+
+- (void)setTitleTodaySelectionColor:(UIColor *)titleTodaySelectionColor
+{
+	self.appearance.titleTodaySelectionColor = titleTodaySelectionColor;
+}
+
+- (UIColor *)titleTodaySelectionColor
+{
+	return self.appearance.titleTodaySelectionColor;
+}
+
 #pragma mark - subtitleDefaultColor
 
 - (void)setSubtitleDefaultColor:(UIColor *)subtitleDefaultColor

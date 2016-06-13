@@ -151,6 +151,21 @@
     return _titleColors[@(FSCalendarCellStateWeekend)];
 }
 
+- (void)setTitleTodaySelectionColor:(UIColor *)color
+{
+	if (color) {
+		_titleColors[@(FSCalendarCellStateToday|FSCalendarCellStateSelected)] = color;
+	} else {
+		[_titleColors removeObjectForKey:@(FSCalendarCellStateToday|FSCalendarCellStateSelected)];
+	}
+	[_calendar.collectionView.visibleCells makeObjectsPerformSelector:@selector(setNeedsLayout)];
+}
+
+- (UIColor *)titleTodaySelectionColor
+{
+	return _titleColors[@(FSCalendarCellStateToday|FSCalendarCellStateSelected)];
+}
+
 - (void)setSubtitleDefaultColor:(UIColor *)color
 {
     if (color) {
