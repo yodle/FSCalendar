@@ -14,7 +14,8 @@
 #pragma mark - Constance
 
 UIKIT_EXTERN CGFloat const FSCalendarStandardHeaderHeight;
-UIKIT_EXTERN CGFloat const FSCalendarStandardWeekdayHeight;
+UIKIT_EXTERN CGFloat const FSCalendarStandardMonthlyWeekdayHeight;
+UIKIT_EXTERN CGFloat const FSCalendarStandardWeeklyWeekdayHeight;
 UIKIT_EXTERN CGFloat const FSCalendarStandardMonthlyPageHeight;
 UIKIT_EXTERN CGFloat const FSCalendarStandardWeeklyPageHeight;
 UIKIT_EXTERN CGFloat const FSCalendarStandardCellDiameter;
