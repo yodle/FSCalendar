@@ -204,6 +204,8 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     _orientation = self.currentCalendarOrientation;
     _focusOnSingleSelectedDate = YES;
     _showsPlaceholders = YES;
+    _showsTopBorder = YES;
+    _showsBottomBorder = YES;
     
     UIView *contentView = [[UIView alloc] initWithFrame:CGRectZero];
     contentView.backgroundColor = [UIColor clearColor];
@@ -243,15 +245,19 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     self.collectionView = collectionView;
     self.collectionViewLayout = collectionViewLayout;
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
-    view.backgroundColor = FSCalendarStandardSeparatorColor;
-    [self addSubview:view];
-    self.topBorder = view;
+    if (self.showsTopBorder) {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
+        view.backgroundColor = FSCalendarStandardSeparatorColor;
+        [self addSubview:view];
+        self.topBorder = view;
+    }
     
-    view = [[UIView alloc] initWithFrame:CGRectZero];
-    view.backgroundColor = FSCalendarStandardSeparatorColor;
-    [self addSubview:view];
-    self.bottomBorder = view;
+    if (self.showsBottomBorder) {
+        view = [[UIView alloc] initWithFrame:CGRectZero];
+        view.backgroundColor = FSCalendarStandardSeparatorColor;
+        [self addSubview:view];
+        self.bottomBorder = view;
+    }
     
     [self invalidateLayout];
     
