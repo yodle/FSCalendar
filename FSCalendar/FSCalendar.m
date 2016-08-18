@@ -1126,6 +1126,38 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     }
 }
 
+- (void)setShowsTopBorder:(BOOL)showsTopBorder
+{
+	if (_showsTopBorder != showsTopBorder) {
+		_showsTopBorder = showsTopBorder;
+		if (showsTopBorder) {
+			UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
+			view.backgroundColor = FSCalendarStandardSeparatorColor;
+			[self addSubview:view];
+			self.topBorder = view;
+		} else {
+			[self.topBorder removeFromSuperview];
+			self.topBorder = nil;
+		}
+	}
+}
+
+- (void)setShowsBottomBorder:(BOOL)showsBottomBorder
+{
+	if (_showsBottomBorder != showsBottomBorder) {
+		_showsBottomBorder = showsBottomBorder;
+		if (showsBottomBorder) {
+			UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
+			view.backgroundColor = FSCalendarStandardSeparatorColor;
+			[self addSubview:view];
+			self.bottomBorder = view;
+		} else {
+			[self.bottomBorder removeFromSuperview];
+			self.bottomBorder = nil;
+		}
+	}
+}
+
 - (void)setLineHeightMultiplier:(CGFloat)lineHeightMultiplier
 {
     _lineHeightMultiplier = MAX(0, lineHeightMultiplier);
