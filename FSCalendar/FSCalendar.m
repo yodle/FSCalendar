@@ -1006,14 +1006,12 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 {
     if (_weekdayHeight == FSCalendarAutomaticDimension) {
         if (_preferredWeekdayHeight == FSCalendarAutomaticDimension) {
-			BOOL isPortrait = UIDeviceOrientationIsPortrait(_orientation);
-			CGFloat weekdayHeight = isPortrait ? FSCalendarStandardMonthlyWeekdayHeight : FSCalendarStandardWeeklyWeekdayHeight;
             if (!self.floatingMode) {
-				CGFloat divider = isPortrait ? FSCalendarStandardMonthlyPageHeight : FSCalendarStandardWeeklyPageHeight;
+                CGFloat divider = FSCalendarStandardMonthlyPageHeight;
                 CGFloat contentHeight = self.animator.cachedMonthSize.height*(1-_showsScopeHandle*0.08);
-                _preferredWeekdayHeight = (weekdayHeight/divider)*contentHeight;
+                _preferredWeekdayHeight = (FSCalendarStandardWeekdayHeight/divider)*contentHeight;
             } else {
-                _preferredWeekdayHeight = weekdayHeight*MAX(1, FSCalendarDeviceIsIPad*1.5)*_lineHeightMultiplier;
+                _preferredWeekdayHeight = FSCalendarStandardWeekdayHeight*MAX(1, FSCalendarDeviceIsIPad*1.5)*_lineHeightMultiplier;
             }
         }
         return _preferredWeekdayHeight;
