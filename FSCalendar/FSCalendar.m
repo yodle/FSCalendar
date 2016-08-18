@@ -253,7 +253,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     }
     
     if (self.showsBottomBorder) {
-        view = [[UIView alloc] initWithFrame:CGRectZero];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
         view.backgroundColor = FSCalendarStandardSeparatorColor;
         [self addSubview:view];
         self.bottomBorder = view;
