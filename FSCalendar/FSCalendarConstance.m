@@ -11,10 +11,9 @@
 #import "FSCalendarConstance.h"
 
 CGFloat const FSCalendarStandardHeaderHeight = 40;
-CGFloat const FSCalendarStandardMonthlyWeekdayHeight = 25;
-CGFloat const FSCalendarStandardWeeklyWeekdayHeight = 50;
+CGFloat const FSCalendarStandardWeekdayHeight = 25;
 CGFloat const FSCalendarStandardMonthlyPageHeight = 300.0;
-CGFloat const FSCalendarStandardWeeklyPageHeight = 97.0;
+CGFloat const FSCalendarStandardWeeklyPageHeight = 108+1/3.0;
 CGFloat const FSCalendarStandardCellDiameter = 100/3.0;
 CGFloat const FSCalendarAutomaticDimension = -1;
 CGFloat const FSCalendarDefaultBounceAnimationDuration = 0.15;
