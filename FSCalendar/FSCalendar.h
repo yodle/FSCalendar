@@ -360,16 +360,6 @@ IB_DESIGNABLE
 @property (readonly, nonatomic) NSArray *selectedDates;
 
 /**
- * A Boolean value that determines whether the calendar should show the top border. Default is YES.
- */
-@property (assign, nonatomic) IBInspectable BOOL showsTopBorder;
-
-/**
- * A Boolean value that determines whether the calendar should show the bottom border. Default is YES.
- */
-@property (assign, nonatomic) IBInspectable BOOL showsBottomBorder;
-
-/**
  * Reload the dates and appearance of the calendar.
  */
 - (void)reloadData;

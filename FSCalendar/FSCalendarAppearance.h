@@ -215,6 +215,16 @@ typedef NS_OPTIONS(NSUInteger, FSCalendarCaseOptions) {
  */
 @property (assign, nonatomic) BOOL adjustsFontSizeToFitContentSize;
 
+/**
+ * A Boolean value that determines whether the calendar should show the top border. Default is YES.
+ */
+@property (assign, nonatomic) BOOL showsTopBorder;
+
+/**
+ * A Boolean value that determines whether the calendar should show the bottom border. Default is YES.
+ */
+@property (assign, nonatomic) BOOL showsBottomBorder;
+
 #if TARGET_INTERFACE_BUILDER
 
 // For preview only

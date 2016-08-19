@@ -115,6 +115,9 @@
         
         _borderColors = [NSMutableDictionary dictionaryWithCapacity:2];
         
+		_showsTopBorder = YES;
+		_showsBottomBorder = YES;
+		
     }
     return self;
 }
@@ -766,6 +769,18 @@
 - (BOOL)adjustsFontSizeToFitCellSize
 {
     return self.adjustsFontSizeToFitContentSize;
+}
+
+- (void)setShowsTopBorder:(BOOL)showsTopBorder
+{
+	_showsTopBorder = showsTopBorder;
+	_calendar.topBorder.hidden = !showsTopBorder;
+}
+
+- (void)setShowsBottomBorder:(BOOL)showsBottomBorder
+{
+	_showsBottomBorder = showsBottomBorder;
+	_calendar.bottomBorder.hidden = !showsBottomBorder;
 }
 
 @end
